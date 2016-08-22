@@ -1,0 +1,20 @@
+import java.util.Arrays;
+
+public class BinarySearch{
+	/*work on intervals*/
+	public static int rank(int key, int[] a){
+		
+		/*Array must be sorted for searching*/
+		int lo = 0;
+		int hi = a.length - 1;
+		
+		while(lo <= hi){
+			int mid = lo + (hi - lo) / 2;
+			/*Because (lo + hi) / 2 has overflow issue*/
+			if      (key < a[mid]) hi = mid - 1;
+			else if (key > a[mid]) lo = mid + 1;
+			else                   return mid;
+		}
+		return -1;
+	}
+}
