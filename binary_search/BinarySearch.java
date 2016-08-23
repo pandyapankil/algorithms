@@ -2,7 +2,7 @@ import java.util.Arrays;
 
 public class BinarySearch{
 	/*work on intervals*/
-	public static int rank(int key, int[] a){
+	static int rank(int key, int[] a){
 		
 		/*Array must be sorted for searching*/
 		int lo = 0;
