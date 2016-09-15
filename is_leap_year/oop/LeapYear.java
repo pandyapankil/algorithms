@@ -1,4 +1,4 @@
-class Year{
+class LeapYear{
 	private int year;
 	Year(int year){
 		this.year = year;	
