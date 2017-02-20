@@ -69,3 +69,32 @@ public class Anagram {
 		System.out.println(str + " and " + str2 + " are anagrams (StringBuilder) : " + anagram.isAnagramMap(str));
 	}
 }
+
+/*/*static boolean isAnagram(String str1, String str2) {
+		/* Remove Spaces and convert to lowercase */
+		str1 = str1.replaceAll("\\s+", "").toLowerCase();
+		str2 = str2.replaceAll("\\s+", "").toLowerCase();
+
+		/* check if any string is null */
+		if (str1 == null || str2 == null) return false;
+
+		/* check if length of both the strings are same */
+		if (str1.length() != str2.length()) return false;
+
+		HashMap<Character, Integer> hm = new HashMap<Character, Integer>();
+		for (int i = 0; i < str2.length(); i++) {
+			char charAsKey = str1.charAt(i);
+			int charCountAsValue = 0;
+			if (hm.containsKey(charAsKey)) charCountAsValue = hm.get(charAsKey);
+			hm.put(charAsKey, ++charCountAsValue);
+			charAsKey = str2.charAt(i);
+			charCountAsValue = 0;
+			if (hm.containsKey(charAsKey)) charCountAsValue = hm.get(charAsKey);
+			hm.put(charAsKey, --charCountAsValue);
+		}
+		for (int value : hm.values()) {
+			if (value != 0)
+				return false;
+		}
+		return true;
+	}*/
